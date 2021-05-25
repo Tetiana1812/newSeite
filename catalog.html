@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Catalog</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body class="catalog">
+	<nav class="main-nav  main-nav--closed">
+		<div class="main-nav__wrapper">
+		<div class="main-nav__logo">
+			<a href="index.html"><picture>
+				<source media="(min-width:1200px)" srcset="img/mishka-logo-desktop.png">
+				<source media="(min-width:768px)" srcset="img/mishka-logo-tablet.png">
+				<img src="img/logo.png" alt="logo">
+			</picture></a>
+		</div>
+		<button class="main-nav__toggle" type="button">Open</button>
+		
+			<ul class="main-nav__items">
+				<li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+				<li class="main-nav__item"><a href="knitting.html">Вязание на заказ</a></li>
+			</ul>
+			<ul class="main-nav__user-items">
+				<li class="main-nav__item  main-nav__item--find"><a href="">Поиск по сайту</a></li>
+				<li class="main-nav__item  main-nav__item--card"><a href="">Корзина: пока пуста</a></li>
+			</ul>
+		
+			<ul class="main-nav__desktop">
+				<li class="main-nav__item"><a href="">Новые поступления</a></li>
+				<li class="main-nav__item"><a href="">Распродажа</a></li>
+			</ul>
+			<p class="main-nav__intro">Бесплатная доставка по России</p>
+		</div>
+	</nav>
+	<header class="catalog-header header">
+		<h2 class="catalog-header__title  ttl">Каталог товаров</h2>
+	</header>
+	<section class="catalog-content">
+		<div class="catalog-content__wrapper">
+			<div class="catalog-content__items">
+				<div class="catalog-content__img">
+					<picture>
+						<source media="(min-width:1200px)" srcset="img/photo-1-desktop.jpg">
+						<source media="(min-width:768px)" srcset="img/photo-1-tablet.jpg">
+						<img src="img/photo-1-mobile.jpg" alt="">
+					</picture>
+				</div>
+					<h2 class="catalog-content__title">Зайчик-попрыгайчик</h2>
+					<p class="catalog-content__descr">Рост 30 см, вес 200 г</p>
+					<div class="catalog-content__prise">
+						<span>1 200 руб.</span>
+						<img class="catalog-content__cart" src="img/cart.png" alt="cart">
+					</div>
+		</div>
+			<div class="catalog-content__items">
+				<div class="catalog-content__img">
+					<picture>
+						<source media="(min-width:1200px)" srcset="img/photo-2-desktop.jpg">
+						<source media="(min-width:768px)" srcset="img/photo-2-tablet.jpg">
+						<img src="img/photo-2-mobile.jpg" alt="">
+					</picture>
+				</div>
+					<h2 class="catalog-content__title">Корзинка для белья</h2>
+					<p class="catalog-content__descr">Диаметр 15 см, высота 10 см</p>
+					<div class="catalog-content__prise">
+						<span>690 руб.</span>
+						<img class="catalog-content__cart" src="img/cart.png" alt="cart">
+					</div>
+			</div>
+			<div class="catalog-content__items">
+				<div class="catalog-content__img">
+					<picture>
+						<source media="(min-width:1200px)" srcset="img/photo-3-desktop.jpg">
+						<source media="(min-width:768px)" srcset="img/photo-3-tablet.jpg">
+						<img src="img/photo-3-mobile.jpg" alt="">
+					</picture>
+				</div>
+					<h2 class="catalog-content__title">Большая корзинка для игрушек</h2>
+					<p class="catalog-content__descr">Диаметр 30 см, высота 30 см</p>
+					<div class="catalog-content__prise">
+						<span>1 500 руб.</span>
+						<img class="catalog-content__cart" src="img/cart.png" alt="cart">
+					</div>
+			</div>
+		</div>
+	</section>
+	<section class="catalog-video">
+		<div class="catalog-video__wrapper">
+			<div class="catalog-video__video">
+				<video id="myvideo" poster="img/video-mobile.jpg">
+					<source src="video/Blue_Sky.3gp" type="video/3gp">
+					<source src="video/Blue_Sky.ogg" type="video/ogg">
+				</video>
+				<div  class="video-control"><img src="img/play.png" alt=""></div>
+			</div>
+				<h2 class="catalog-video__title">Процесс производства</h2>
+				<p class="catalog-video__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+				<button class="btn  catalog-video-button" type="button">Сделать заказ</button>
+		</div>
+	</section>
+	<footer class="footer  main-footer">
+		<div class="main-footer__wrapper">
+			<div class="main-footer__logo">
+				<a href="index.html"><img src="img/logo-footer-desktop.png" alt="logo"></a>
+			</div>
+			<div class="main-footer__social">
+				<a class="social-link  social-link__insta">Instagramm</a>
+				<a class="social-link  social-link__fb">Facebook</a>
+				<a class="social-link  social-link__tw">twitter</a>
+			</div>
+			<div class="main-footer__copyright">
+			<p>Разработано</p>
+				<img src="img/htmlacademy.png" alt="copyright">
+			
+			</div>
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+	<script src="js/script_video.js"></script>
+</body>
+</html>

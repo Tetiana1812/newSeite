@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>knitting_to_order</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body class="knitting">
+	<nav class="main-nav  main-nav--closed">
+		<div class="main-nav__wrapper">
+		<div class="main-nav__logo">
+			<a href="index.html"><picture>
+				<source media="(min-width:1200px)" srcset="img/mishka-logo-desktop.png">
+				<source media="(min-width:768px)" srcset="img/mishka-logo-tablet.png">
+				<img src="img/logo.png" alt="logo">
+			</picture></a>
+		</div>
+		<button class="main-nav__toggle" type="button">Open</button>
+		
+			<ul class="main-nav__items">
+				<li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+				<li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+			</ul>
+			<ul class="main-nav__user-items">
+				<li class="main-nav__item  main-nav__item--find"><a href="">Поиск по сайту</a></li>
+				<li class="main-nav__item  main-nav__item--card"><a href="">Корзина: пока пуста</a></li>
+			</ul>
+		
+			<ul class="main-nav__desktop">
+				<li class="main-nav__item"><a href="">Новые поступления</a></li>
+				<li class="main-nav__item"><a href="">Распродажа</a></li>
+			</ul>
+			<p class="main-nav__intro">Бесплатная доставка по России</p>
+		</div>
+	</nav>
+	<header class="knitting-header header">
+		<h2 class="knitting-header__title  ttl">Вязание на заказ</h2>
+	</header>
+	<section class="knitting-form">
+		<div class="knitting-form__wrapper">
+			<form class="knitting__form" action="" method="post">
+				<p class="knitting-form__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
+				<fieldset class="knitting-form__items  knitting-form__type">
+					<div class="knitting-form__descr"><span>Тип</span></div>
+					<input type="radio" value="interier" id="btn-1" name="type" checked>
+					<input type="radio" value="toy" id="btn-2" name="type">
+					<div class="knitting-form__filter  knitting-form__column">
+						<label class="radio" for="btn-1"><span></span>Аксессуар для интерьера</label>
+						<label class="radio" for="btn-2"><span></span>Детская игрушка</label>
+					</div>
+				</fieldset>
+				<fieldset class="knitting-form__items  knitting-form__color">
+					<div class="knitting-form__color-wrapper">
+					<div class="knitting-form__descr"><span>Цвет</span></div>
+					<input type="checkbox" id="btn-3" name="color">
+					<input type="checkbox" id="btn-4" name="color">
+					<input type="checkbox" id="btn-5" name="color">
+					<input type="checkbox" id="btn-6" name="color">
+					<input type="checkbox" id="btn-7" name="color">
+					<input type="checkbox" id="btn-8" name="color">
+					<div class="knitting-form__filter  knitting-form__row">
+						<label class="checkbox" for="btn-3"><span></span>Белый</label>
+						<label class="checkbox" for="btn-4"><span></span>Серый</label>
+						<label class="checkbox" for="btn-5"><span></span>«Тиффани»</label>
+						<label class="checkbox" for="btn-6"><span></span>Черный</label>
+						<label class="checkbox" for="btn-7"><span></span>Розовый</label>
+						<label class="checkbox" for="btn-8"><span></span>Оранжевый</label>
+					</div>
+					</div>
+				</fieldset>
+				<fieldset class="knitting-form__items  knitting-form__name">
+					<div class="knitting-form__descr"><span class="knitting-form__ttl">фио</span></div>
+					<div class="knitting-form__column">
+						<span class="knitting-form__surname">Фамилия:</span>
+						<input type="text" id="surname" placeholder="Укажите фамилию">
+						<span class="knitting-form__surname">Имя:</span>
+						<input type="text" id="name" placeholder="Введите ваше имя">
+						<span class="knitting-form__surname">Отчество:</span>
+						<input type="text" id="father" placeholder="Отчество, если желаете">
+					</div>
+				</fieldset>
+				<fieldset class="knitting-form__network">
+					<div class="knitting-form__network__wrapper">
+						<fieldset class="knitting-form__items  knitting-form__tel">
+							<div class="knitting-form__descr"><span>тел</span></div>
+							<input type="tel" id="tel" placeholder="+7 ХХХ ХХ ХХ">
+						</fieldset>
+						<fieldset class="knitting-form__items  knitting-form__email">
+							<div class="knitting-form__descr"><span>e-mail</span></div>
+							<input type="email" id="email" placeholder="Ваш e-mail">
+						</fieldset>
+					</div>
+				</fieldset>
+				<fieldset class="knitting-form__items  knitting-form__extra">
+					<div class="knitting-form__descr"><span>доп</span></div>
+					<textarea id="extra" rows="8" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+				</fieldset>
+				<div class="knitting-form__complet">
+					<input class="btn  knitting-form__button" type="submit" value="ОТПРАВИТЬ ЗАКАЗ">
+					<p class="knitting-form__rule">Все поля являются обязательными</p>
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer class="footer  main-footer">
+		<div class="main-footer__wrapper">
+			<div class="main-footer__logo">
+				<a href="index.html"><img src="img/logo-footer-desktop.png" alt="logo"></a>
+			</div>
+			<div class="main-footer__social">
+				<a class="social-link  social-link__insta">Instagramm</a>
+				<a class="social-link  social-link__fb">Facebook</a>
+				<a class="social-link  social-link__tw">twitter</a>
+			</div>
+			<div class="main-footer__copyright">
+			<p>Разработано</p>
+				<img src="img/htmlacademy.png" alt="copyright">
+			
+			</div>
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+</html>
