@@ -1,0 +1,162 @@
+/* LESS Document */
+@import "less/variables.less";
+@import "less/mixins.less";
+
+.contacts {
+	width: 100%;
+}
+.contacts__wrapper {
+	padding: 0;
+	font-family: @fontContent;
+	.font(14px; 30px; bold);
+	color: #444;
+	position: relative;
+}
+
+.contacts__title {
+	.container();
+	.title();
+	margin-bottom: 30px;
+	margin-top: 35px;
+	padding: 0;
+}
+.contacts__table {
+	.container();
+	margin-bottom: 30px;
+	border-collapse: collapse;
+}
+.contacts__table td {
+	width: 65px;
+	padding: 12px 0;
+	vertical-align: top;
+}
+.contacts__table td:last-child {
+	width: 195px;
+	padding-left: 10px;
+}
+.contacts__table tr:first-child {
+	padding-bottom: 40px;
+}
+.contacts__table--email {
+	text-decoration: none;
+	border-bottom: 1px solid #62d1ba;
+	line-height: 30px;
+	color: #444444;
+}
+.contacts__table--email:hover {
+	color: #46c1ae;
+}
+.contacts__map {
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+.contacts__button {
+	.btn();
+	width: 80%;
+	margin: 13% 10%;
+}
+.contacts__svg {
+	display: none;
+}
+
+@media @tablet-widths {
+	.contacts__title {
+		.container();
+		font-family: @font;
+		.font(40px; 50px; bold);
+		margin-bottom: 65px;
+		margin-top: 65px;
+		padding: 0;
+	}
+	.contacts__table {
+		.container();
+		margin-bottom: 53px;
+		border-collapse: collapse;
+	}
+	.contacts__table tbody {		
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	.contacts__table tr {
+		width: 50%;
+	}
+	.contacts__table td {
+		width: auto;
+		padding-right: 25px;
+	}
+	.contacts__button {
+		.btn();
+		width: 30%;
+		margin: 7% 35% 0;
+	}
+	.contacts__svg {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 6.5%;
+	}
+}
+
+@media @desktop-widths {
+	.contacts__wrapper {
+		.container;
+		margin-top: 6%;
+		display: grid;
+		grid-template-columns: 115px 290px 1fr;
+		column-gap: 60px;
+		grid-template-areas: "svg title map"
+							 "svg tbl map"
+							 "svg btn map";
+		height: auto;
+	}
+	.contacts__svg {
+		display: block;
+		grid-area: svg;
+		margin-top: 6%;
+	}
+	.contacts__title {
+		.font(50px; 57px; bold);
+		margin-bottom: 25px;
+		margin-top: 57px;
+		padding: 0;
+		grid-area: title;
+	}
+	.contacts__table tbody {		
+		display: table;
+	}
+	.contacts__table {
+		grid-area: tbl;
+		margin-bottom: 50px;
+		margin-top: 0;
+		.font(16px; 30px);
+	}
+	.contacts__button {
+		.btn();
+		grid-area: btn;
+		box-sizing: border-box;
+		width: 230px;
+		height: 52px;
+		margin: 0 auto 0 0;
+		margin-top: auto;
+	}
+	.contacts__map {
+		grid-area: map;
+		height: 100%;
+		align-self: center;
+		margin: 0;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	.contacts__table td {
+		width: auto; /* 215px/290px */
+		padding-right: 0;
+		
+	}
+	.contacts__table td:first-child {
+		width: 70px; /* 55px/290px */
+	}
+
+}

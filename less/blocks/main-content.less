@@ -1,0 +1,224 @@
+/* LESS Document */
+@import "less/variables.less";
+@import "less/mixins.less";
+
+.main-content {
+	position: relative;
+	.container();
+	padding-top: 30px;
+}
+.main-content__title {
+	.title();
+	margin: 0;
+	margin-bottom: 7px;
+}
+.main-content__featured {
+	margin: 0;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	color: #63d1bb;
+}
+.main-content__descr {
+	font-family: @fontContent;
+	font size: 14px;
+	line-height: 24px;
+	color: #444444;
+	margin: 0;
+	margin-bottom: 18px;
+}
+.main-content__description {
+	font-family: @fontContent;
+	font-size: 14px;
+	line-height: 20px;
+	color: #444444;
+	border-collapse: collapse;
+	margin: 0;
+	margin-bottom: 28px;
+	
+}
+.main-content__description td {
+	border-bottom: @border-bottom;
+	width: 86px;
+	padding: 12px 0;
+}
+.main-content__description td:last-child {
+	width: 174px;
+	padding-left: 10px;
+}
+.main-content__img {
+	width: 100%;
+	height: auto;
+	margin: 0 0 25px 0;
+}
+.main-content__prise {
+	font-family: @font;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+	color: #444444;
+	margin: 0;
+	margin-bottom: 25px;
+}
+.main-content__button {
+	.btn();
+	margin: 0 0 35px;
+	width: 100%;
+}
+
+@media @tablet-widths {
+	.main-content {
+		position: relative;
+		.container-fluid ();
+		margin-top: 15px;
+		padding-bottom: 50px;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 45.5% 20.5% 1fr;
+		column-gap: 30px;
+		grid-template-areas: "title title featured"
+							"descr img img"
+							"tab img img"
+							"price img img"
+							"btn img img";
+	}
+	.main-content__title {
+		.font(40px; 50px; bold);
+		margin: 0;
+		margin-bottom: 60px;
+		grid-area: title;
+	}
+	.main-content__featured {
+		margin: 0;
+		width: 90px;
+		margin-bottom: 60px;
+		margin-right: 30px;
+		text-transform: uppercase;
+		color: #63d1bb;
+		align-self: center;
+		text-align: center;
+		justify-self: end;
+		grid-area: featured;
+	}
+	.main-content__descr {
+		font-family: @fontContent;
+		.font(16px; 30px);
+		color: #444444;
+		margin: 0;
+		margin-bottom: 50px;
+		grid-area: descr;
+		width: 90%;
+	}
+	.main-content__img {
+		width: 100%;
+		max-height: auto;
+		margin: 0;
+		grid-area: img;
+		padding-top: 5px;
+	}
+	.main-content__description {
+		.font(15px; 20px);
+		margin: 0;
+		margin-bottom: 63px;
+		grid-area: tab;
+	}
+	.main-content .main-content__prise {
+		.font(18px; 24px; bold);
+		text-align: center;
+		margin: 0;
+		margin-bottom: 30px;
+		grid-area: price;
+	}
+	.main-content__button {
+		.btn();
+		margin: 0;
+		width: 100%;
+		grid-area: btn;
+	}
+}
+
+@media @desktop-widths {
+	.main-content {
+		position: relative;
+		.container();
+		padding-top: 70px;
+		padding-bottom: 70px;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 11% 28% 50%;
+		column-gap: 6%;
+		grid-auto-rows: 160px 145px 220px 50px auto;
+	}
+	.main-content__featured {
+		margin: 0;
+		margin-bottom: 58px;
+		width: 75px;
+		padding-top: 70px;
+		.font(16px; 16px; bold);
+		text-transform: uppercase;
+		color: #63d1bb;
+		align-self: flex-start;
+		justify-self: end;
+		grid-area: none;
+		grid-column: 1/2;
+		grid-row: 1 / 5;
+	}
+	.main-content__title {
+		.font(50px; 58px; bold);
+		width: 50%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 16%;
+		left: 16%;
+		grid-area: none;
+		z-index: 2;
+	}
+	.main-content__descr {
+		font-family: @fontContent;
+		.font(16px; 30px);
+		color: #444444;
+		margin: 0;
+		margin-bottom: 58px;
+		grid-area: none;
+		grid-column: 2/3;
+		grid-row: 2 / 3;
+		width: 290px;
+		align-self: flex-start;
+	}
+	.main-content__img {
+		width: 100%;
+		max-height: auto;
+		justify-self: end;
+		padding: 0;
+		margin: 0;
+		grid-area: none;
+		grid-column: 3;
+		grid-row: 1 / 5;
+	}
+	.main-content__description {
+		.font(15px; 20px);
+		margin: 0;
+		margin-bottom: 63px;
+		grid-area: none;
+		grid-column: 2/3;
+		grid-row: 3 / 4;
+	}
+	.main-content .main-content__prise {
+		.font(18px; 24px; bold);
+		text-align: center;
+		margin: 0;
+		margin-bottom: 30px;
+		grid-area: none;
+		grid-column: 2/3;
+		grid-row: 4 / 5;
+	}
+	.main-content__button {
+		.btn();
+		margin: 0;
+		width: 100%;
+		grid-area: none;
+		grid-column: 2/3;
+		grid-row: 5;
+	}
+}

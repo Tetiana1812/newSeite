@@ -1,0 +1,51 @@
+/* LESS Document */
+@import "less/variables.less";
+
+@font-face {
+	font-weight: normal;
+	font-family: "Verdana";
+	font-style: normal;
+	
+	src: url("../fonts/verdana.woff2") format("woff2");
+}
+@font-face {
+	font-weight: bold;
+	font-family: "Verdana";
+	font-style: normal;
+	
+	src: url("../fonts/verdanab.woff2") format("woff2");
+}
+body {
+
+	font-family: "Verdana", Arial, sans-serif;
+	font-size: 16px;
+	padding: 0;
+	margin: 0 auto;
+	border: thin solid blue;
+}
+
+.section {
+	width: 100%;
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+a:hover {
+	color: rgba(0,0,0,0.6);
+}
+a:visited {
+	color: rgba(0,0,0,0.3);
+}
+.btn:hover {
+	background-color: #444444;
+	color: white;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+fieldset {
+    display: block;
+    .block();
+    border: none;
+}

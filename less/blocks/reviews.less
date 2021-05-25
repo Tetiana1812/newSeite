@@ -1,0 +1,147 @@
+/* LESS Document */
+@import "less/variables.less";
+@import "less/mixins.less";
+
+.reviews {
+	.container();
+	margin-bottom: 42px;
+	padding: 0;
+}
+
+.reviews__title {
+	.title();
+	margin-bottom: 30px;
+}
+.reviews__items p {
+	font-family: @fontContent;
+	font-size: 14px;
+	line-height: 30px;
+	color: #444444;
+	margin-bottom: 20px;
+	padding: 0;
+}
+.reviews__writter {
+	margin: 0;
+	padding: 0;
+	font-family: @font;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #000000;
+	margin-bottom: 5px;
+}
+.reviews__email {
+	font-family: @fontContent;
+	font-size: 14px;
+	line-height: 30px;
+	color: #444444;
+	font-weight: bold;
+	padding: 0 0 30px;
+
+	display: block;
+}
+.reviews__strelki {
+	cursor: pointer;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	width: 100%;
+}
+.reviews__strelka {
+	display: none;
+}
+.reviews__strelki table {
+border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	margin: 0;
+}
+.reviews__strelki td {
+	border: @border-bottom;
+	text-align: center;
+	height: 50px;
+	width: 50%;
+	cursor: pointer;
+}
+.strelka-left:hover, .strelka-right:hover {
+	opacity: 0.6;
+}
+.reviews__button {
+	.btn ();
+	cursor: pointer;
+	width: 100%;
+	margin: 0;
+	margin-top: 40px;
+}
+@media @tablet-widths {
+	.reviews {
+		width: auto;
+		margin-bottom: 68px;
+		padding-top: 80px;
+		background: url("../img/review.jpg") no-repeat top left;
+		background-size: auto auto;
+	}
+	.reviews__wrapper{
+		.container-fluid();
+		position: relative;
+		padding-bottom: 90px;
+	}
+	.reviews__title {
+		.font(40px; 50px; bold);
+		margin: 0;
+		margin-bottom: 60px;
+	}
+	.reviews__items p {
+		.font(16px; 30px);
+		margin-bottom: 10px;
+		padding: 0;
+	}
+	.reviews__writter {
+		.font(16px; 32px; bold);
+		color: #000000;
+		margin-bottom: 10px;
+	}
+	.reviews__email {
+		font-family: @fontContent;
+		.font(16px; 16px);
+		padding: 0;
+	}
+	.reviews__button {
+		.btn ();
+		width: 175px;
+		padding: 16px 45px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+	}
+	.reviews__strelki {
+		margin: 0;
+		width: 25%;
+		position: absolute;
+		bottom: 90px;
+		right: 0;
+		padding: 0;
+	}
+	.reviews__strelki td {
+		border: none;
+	}
+	svg {
+		cursor: pointer;
+	}
+}
+@media @desktop-widths {
+	.reviews {
+		.container();
+		margin-bottom: 64px;
+		background: url("../img/review-desktop.jpg") no-repeat top left;
+	}
+	.reviews__strelki {
+		margin: 0;
+		width: 175px;
+		position: absolute;
+		bottom: 90px;
+		right: 0;
+		padding: 0;
+	}
+}

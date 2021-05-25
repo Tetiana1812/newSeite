@@ -1,0 +1,110 @@
+/* LESS Document */
+@import "less/variables.less";
+@import "less/mixins.less";
+
+.about-us {
+	.container();
+	padding: 0;
+	margin-bottom: 30px;
+}
+.about-us__title {
+	.title();
+	padding: 0;
+	margin-bottom: 30px;
+}
+.about-us__items  {
+	display: block;
+	width: 62px;
+	height: 37px;
+	background: url("../img/sprite-about-us.png") no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+.about-us__items--eco {
+	background-position: 0 0;
+}
+.about-us__items--ruprise {
+	background-position: 0 -36px;
+}
+.about-us__items--like {
+	background-position: 0 -71px;
+}
+.about-us__items--handmade {
+	background-position: 0 -111px;
+}
+.about-us__items--production {
+	background-position: 0 -147px;
+	margin-left: -7px;
+}
+.about-us__items--present {
+	background-position: 0 -186px;
+}
+.about-us__wrapper p {
+	margin: 15px 0 30px;
+	font-family: @font;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: bold;
+	padding: 0;
+}
+
+@media @tablet-widths {
+	.about-us {
+		.container();
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	.about-us__title {
+		.font(40px; 50px; bold);
+		font-family: @font;
+		margin-bottom: 45px;
+	}
+	.about-us__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+	.about-us__wrapper div {
+		width: 50%;
+	}
+	.about-us__wrapper div p {
+		margin-bottom: 55px;
+		width: 260px;
+		.font(20px; 30px; bold);
+	}
+	.about-us__wrapper div:nth-child(n+4) p {
+		width: 322px; 
+	}
+	.about-us__wrapper div:nth-child(4), .about-us__wrapper div:first-child {
+		order:-1;
+	}
+	.about-us__wrapper div:nth-child(2), .about-us__wrapper div:nth-child(5) {
+		order: 2;
+	}
+	.about-us__wrapper div:nth-child(3), .about-us__wrapper div:nth-child(6) {
+		order: 3;
+	}
+}
+
+@media @desktop-widths {
+	.about-us {
+		width: 61%;
+		margin: 0 auto;
+		padding: 0;
+		margin-bottom: 30px;
+	}
+	.about-us__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.about-us__wrapper div {
+		width: 50%;
+	}
+	.about-us__wrapper div p {
+		width: 255px;
+	}
+	.about-us__wrapper div:nth-child(n+4) p {
+		width: 322px; 
+	}
+}

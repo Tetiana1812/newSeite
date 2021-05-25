@@ -1,0 +1,41 @@
+/* LESS Document */
+@import "less/variables.less";
+@import "less/mixins.less";
+
+.header {
+	width: 100%;
+	height: 180px;
+	background-color: #f1f1f1;
+	margin: 0;
+	padding-top: 1px;
+	margin-bottom: 30px;
+}
+
+.ttl {
+	.title();
+	text-align: center;
+	margin-top: 75px;
+	padding: 0;
+}
+
+@media @tablet-widths {
+	.header {
+		margin-top: -65px;
+		height: 225px;
+		background: #f1f1f1 url("../img/zigzag-fill-desktop.png") repeat-x left bottom;
+		border-top: @border-bottom;
+	}
+	.ttl {
+		font-family: @font;
+		.font(40px; 50px; bold);
+		text-align: center;
+		margin-top: 98px;
+	}
+}
+
+@media @desktop-widths {
+	.header {
+		height: 255px;
+		margin-top: -45px;
+	}
+}

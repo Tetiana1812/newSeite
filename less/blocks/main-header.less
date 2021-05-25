@@ -1,0 +1,180 @@
+/* LESS Document */
+@import "less/variables.less";
+@import "less/mixins.less";
+
+.main-header {
+	background: url("@{header-back}") no-repeat top center;
+	background-size: 100% auto;
+	padding-top: 90px;
+	
+}
+.main-header__title {
+	.title();
+	padding: 0 10px;
+	margin: 0px 30px 150px;
+	text-align: center;
+}
+.main-header__button {
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	color: #fff;
+	padding: 28px 30px;
+	display: block;
+	text-decoration: none;
+	
+}
+.left-button {
+	background-color: #63d1bb;
+	position: relative;
+	box-shadow: 0 -5px transparent;
+}
+.left-button:hover {
+	box-shadow: 0 -5px #63d1bb;
+	padding: 23px 30px 32px;
+}
+.left-button span {
+	width: 100px;
+	display: block;
+	color: white;
+}
+.left-button::after {
+	content: "";
+	position: absolute;
+	top: 23px;
+	right: 38px;
+	background: url("../img/interior.png") no-repeat;
+	width: 40px;
+	height: 62px;
+}
+.left-button:hover::after {
+	content: "";
+	position: absolute;
+	top: 18px;
+	right: 38px;
+	background: url("../img/interior.png") no-repeat;
+	width: 40px;
+	height: 62px;
+}
+.right-button {
+	background-color: #56c3b2;
+	position: relative;
+	box-shadow: 0 -5px transparent;
+}
+.right-button:hover {
+	box-shadow: 0 -5px #56c3b2;
+	padding: 23px 30px 32px;
+}
+.right-button span {
+	width: 100px;
+	display: block;
+	color: white;
+}
+.right-button::after {
+	content: "";
+	position: absolute;
+	top: 20px;
+	right: 27px;
+	background: url("../img/toy.png") no-repeat;
+	width: 60px;
+	height: 60px;
+}
+.right-button:hover::after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	right: 27px;
+	background: url("../img/toy.png") no-repeat;
+	width: 60px;
+	height: 60px;
+}
+@media @tablet-widths {
+	.main-header {
+		width: auto;
+		border-top: @border-bottom;
+		margin-top: -65px;
+		background: url("../img/hero-desktop.jpg") no-repeat top center;
+		background-size: 100% auto;
+	}
+	.main-header__title {
+		.font(40px; 50px; bold);
+		font-family: @font;
+		padding: 0;
+		margin: 24% auto 48%;
+		text-align: center;
+		width: 65%;
+		
+	}
+	.main-header__nav {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 87%;
+		margin: 0 auto;
+	}
+	.main-header__button {
+		font-family: "Tahoma", sans-serif;
+		.font(20px; 30px; bold);
+		color: #fff;
+		padding: 30px 188px 30px 35px;
+		display: block;
+		text-decoration: none;
+	}
+	.left-button {
+		background-color: #63d1bb;
+		position: relative;
+		box-sizing: border-box;
+		width: 50%;
+	}
+	.left-button::after {
+		content: "";
+		position: absolute;
+		top: 30px;
+		right: 35px;
+		background: url("../img/interior.png") no-repeat;
+		width: 40px;
+		height: 62px;
+	}
+	.right-button {
+		background-color: #56c3b2;
+		position: relative;
+		box-sizing: border-box;
+		width: 50%;
+	}
+
+	.right-button::after {
+		content: "";
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		background: url("../img/toy.png") no-repeat;
+		width: 60px;
+		height: 60px;
+	}
+	
+}
+@media @desktop-widths {
+	.main-header {
+		width: auto;
+		border-top: @border-bottom;
+		margin-top: -45px;
+		background: url("../img/hero-desktop1.jpg") no-repeat top center;
+		background-size: 100% auto;
+	}
+	.main-header__title {
+		.font(50px; 58px; bold);
+		font-family: @font;
+		padding: 0;
+		margin: 14% auto 31%;
+		text-align: center;
+		width: 650px;
+	}
+	.main-header__nav {
+		width: 91%;
+		margin: 0 auto;
+	}
+	.main-header__button {
+		padding: 36px 375px 30px 35px;
+	}
+}

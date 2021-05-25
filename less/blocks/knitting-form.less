@@ -1,0 +1,408 @@
+/* LESS Document */
+@import "less/variables.less";
+@import "less/mixins.less";
+
+.knitting-form__wrapper {
+	.container();
+	padding: 0;
+	overflow:hidden;
+	margin-bottom: 57px;
+}
+
+.knitting-form__intro {
+	.font(15px; 25px);
+	color: #444;
+	margin: 0 0 25px;
+}
+
+.knitting-form__items {
+	border: none;
+	.block();
+}
+
+.knitting-form__descr {
+	margin-bottom: 30px;
+}
+.knitting-form__descr span {
+	text-transform: uppercase;
+	color: #63d1bb;
+	.font(17px; 17px; bold);
+	display: inline;
+	position: relative;
+	z-index: 2;
+	padding: 0 30px 0 0;
+	background-color: white;
+	
+}
+
+.knitting-form__descr::after {
+	content: "";
+	position: relative;
+	top: -10px;
+	display: block;
+	border-bottom: 1px solid #63d1bb;
+	z-index: 1;
+}
+
+.knitting-form__type input[type="radio"] {
+	display:  none;
+}
+.knitting-form__filter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 0 15px;
+	font-family: @font;
+	.font(17px; 19px; bold);
+	color: #000;
+}
+.radio {
+	position: relative;
+	margin-bottom: 20px;
+	padding-left: 64px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.radio span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #444;
+}
+.radio:hover span {
+	border: 2px solid #63d1bb;
+}
+
+
+#btn-1:checked ~ .knitting-form__filter label[for="btn-1"] span::before,
+#btn-2:checked ~ .knitting-form__filter label[for="btn-2"] span::before { 
+    content: '';
+    position: absolute;
+    left: 11px; top: 11px;
+    background: #63d1bb;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+   }
+
+.knitting-form__color input[type="checkbox"] {
+	display: none;
+}
+
+.checkbox {
+	position: relative;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	padding-left: 64px;
+	cursor: pointer;
+}
+.checkbox span {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 38px;
+	height: 38px;
+	border: 2px solid #444;
+	
+}
+.checkbox:hover span {
+	border: 2px solid #63d1bb;
+}
+
+#btn-3:checked ~ .knitting-form__filter label[for="btn-3"] span::before,
+#btn-4:checked ~ .knitting-form__filter label[for="btn-4"] span::before,
+#btn-5:checked ~ .knitting-form__filter label[for="btn-5"] span::before,
+#btn-6:checked ~ .knitting-form__filter label[for="btn-6"] span::before,
+#btn-7:checked ~ .knitting-form__filter label[for="btn-7"] span::before,
+#btn-8:checked ~ .knitting-form__filter label[for="btn-8"] span::before {
+	content: '';
+    position: absolute;
+    left: 6px; 
+	top: 10px;
+	width: 24px;
+	height: 12px;
+	border-radius: 2px;
+	border-left: 2px solid #000;
+	border-bottom: 2px solid #000;
+	transform: rotate(-45deg);
+}
+.knitting-form__name {
+	margin-bottom: 40px;
+}
+.knitting-form__surname {
+	display: block;
+	font-family: @font;
+	.font(17px; 19px; bold);
+	color: #000;
+	margin: 20px 0 20px;
+}
+.knitting-form__network {
+		border: none;
+	}
+.knitting-form__items input[type="text"], .knitting-form__items input[type="tel"], .knitting-form__items input[type="email"] {
+	border: none;
+	display: block;
+	width: 100%;
+	font-family: @font;
+	.font(17px; 19px);
+	color: #444;
+	padding: 5px 0 20px 0px;
+	border-bottom: 2px solid #000;
+}
+.knitting-form__items input[type="text"]::placeholder, .knitting-form__items input[type="tel"]::placeholder, .knitting-form__items input[type="email"]::placeholder, .knitting-form__items textarea::placeholder {
+	font-family: @font;
+	.font(17px; 19px);
+	color: #444;
+	opacity: 0.3;
+}
+.knitting-form__items input[type="text"]:focus, .knitting-form__items input[type="tel"]:focus, .knitting-form__items input[type="email"]:focus {
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #63d1bb;
+}
+.knitting-form__items textarea {
+	border: 2px solid #000;
+	padding: 10px 15px 0 15px;
+	box-sizing: border-box;
+	width: 100%;
+	resize: none;
+	font-family: @font;
+	.font(17px; 19px);
+	color: #444;
+	border-radius: 0;
+}
+.knitting-form__items textarea:focus {
+	outline: none;
+	border: 2px solid #63d1bb;
+}
+.knitting-form__tel, .knitting-form__email, .knitting-form__extra {
+	margin-bottom: 40px;
+}
+.knitting-form__button {
+	.btn();
+	width: 100%;
+}
+.knitting-form__rule {
+	display: none;
+}
+@media @tablet-widths {
+	.knitting-form__wrapper {
+		width: 100%;
+		padding: 0;
+		overflow: hidden;
+		margin-bottom: 50px;
+		margin-top: 72px;
+	}
+
+	.knitting-form__intro {
+		.container();
+		.font(16px; 30px);
+		color: #444;
+		margin-bottom: 58px;
+		}
+	.knitting-form__type {
+		.container();
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-bottom: 30px;
+	}
+	.knitting-form__descr {
+		width: 25%;
+	}
+	.knitting-form__descr span {
+		background-color: transparent;
+	}
+	.knitting-form__descr::after {
+		display: none;
+	}
+	.knitting-form__column {
+		width: 75%;
+	}
+	.knitting-form__color {
+		background-color: #f1f1f1;
+		padding: 60px 0 40px;
+		margin-bottom: 60px;
+	}
+	.knitting-form__color-wrapper {
+		.container();
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: baseline;
+	}
+	.knitting-form__row {
+		display: flex;
+		width: 75%;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.checkbox {
+		box-sizing: border-box;
+		width: 50%;
+	}
+	.knitting-form__name {
+		.container();
+		margin-bottom: 60px;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	.knitting-form__surname:first-child {
+		margin-top: 0;
+	}
+	.knitting-form__network {
+		background-color: #f1f1f1;
+		padding: 60px 0 40px;
+		margin-bottom: 60px;
+		border: none;
+	}
+	.knitting-form__network__wrapper {
+		.container();
+	}
+	.knitting-form__tel {
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+	}
+	.knitting-form__email {
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+	}
+	.knitting-form__descr {
+		display: inline;
+		box-sizing: border-box;
+		width: 25%;
+	}
+	.knitting-form__items input[type="text"] {
+		display: inline;
+		box-sizing: border-box;
+		width: 100%;
+		background-color: transparent;
+	}
+	.knitting-form__items input[type="tel"], .knitting-form__items input[type="email"] {
+		width: 75%;
+		background-color: transparent;
+	}
+	.knitting-form__extra {
+		.container();
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+		margin-bottom: 50px;
+	}
+	.knitting-form__extra textarea {
+		box-sizing: border-box;
+		width: 75%;
+	}
+	.knitting-form__extra span {
+		box-sizing: border-box;
+		width: 25%;
+	}
+	.knitting-form__rule {
+		display: block;
+		font-family: @fontContent;
+		.font(16px; 30px);
+		.block();
+		color: #444;
+		align-self: center;
+	}
+	.knitting-form__complet {
+		.container();
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.knitting-form__button {
+		.btn();
+		width: 35%;
+	}
+}
+
+@media @desktop-widths {
+	.knitting-form__intro {
+		box-sizing: border-box;
+		width: 60%;
+		margin: 0 auto;
+		.font(16px; 30px);
+		color: #444;
+		margin-bottom: 58px;
+		}
+	.knitting-form__type {
+		.container();
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		margin-bottom: 30px;
+		justify-content: center;
+	}
+	.knitting-form__descr {
+		width: 17%;
+		text-align: center;
+	}
+	
+	.knitting-form__column {
+		width: 83%;
+		margin-left: 0;
+	}
+	.knitting-form__color {
+		background-color: #f1f1f1;
+		padding: 60px 0 30px 0;
+		margin-bottom: 60px;
+	
+	}
+	.knitting-form__color-wrapper {
+		.container();
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: baseline;
+	}
+	.knitting-form__row {
+		display: flex;
+		width: 83%;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.checkbox {
+		box-sizing: border-box;
+		width: 33.3%;
+	}
+
+	.knitting-form__items input[type="text"] {
+		display: inline;
+		box-sizing: border-box;
+		width: 90%;
+		background-color: transparent;
+	}
+	.knitting-form__items input[type="tel"], .knitting-form__items input[type="email"] {
+		width: 75%;
+		background-color: transparent;
+	}
+	.knitting-form__complet {
+		box-sizing: border-box;
+		width: 68%;
+		margin: 0 auto;
+		margin-left: 235px;
+	}
+	.knitting-form__rule {
+		display: block;
+		font-family: @fontContent;
+		.font(16px; 30px);
+		.block();
+		color: #444;
+		align-self: center;
+	}
+}

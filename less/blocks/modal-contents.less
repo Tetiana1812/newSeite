@@ -1,0 +1,119 @@
+/* LESS Document */
+@import "less/variables.less";
+@import "less/mixins.less";
+.modal-content-reviews {
+	display: none;
+}
+.modal-content-reviews--show {
+	display: block;
+}
+
+.reviews-write--close {
+	position: absolute;
+	top: 0;
+	left: 102%;
+	width: 25px;
+	height: 25px;
+	.no-outline();
+	background-color: rgba(255,255,255,0.60);
+	cursor: pointer;
+}
+
+.reviews-write--close::before,
+.reviews-write--close::after {
+	content: "";
+	width: 35px;
+	height: 2px;
+	background-color: #444;
+	position: absolute;
+	top: 12px;
+	left: -5px;
+}
+
+.reviews-write--close::before {
+	transform: rotate(45deg);
+}
+.reviews-write--close::after {
+	transform: rotate(-45deg);
+}
+.reviews-write--show {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	border: 2px solid #63d1bb;
+	padding: 5px;
+	border-radius: 5px;
+	background: white;
+	font-family: @font;
+	.font(14px; 30px; bold);
+	color: #000;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+	z-index: 25;
+}
+
+.reviews-write input[type="text"], .reviews-write__text, .reviews-write input[type="email"] {
+	border: none;
+	display: block;
+	width: 100%;
+	font-family: @font;
+	.font(14px; 30px);
+	color: #444;
+	padding: 5px 0 10px 0px;
+	border-bottom: 1px solid #000;
+	margin-bottom: 15px;
+}
+.reviews-write input[type="text"]:focus, .reviews-write input[type="email"]:focus {
+	.no-outline();
+	border-bottom: 1px solid #63d1bb;
+	margin-bottom: 10px;
+}
+.reviews-write__text {
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 15px;
+	padding: 5px;
+	border: 1px solid #000;
+	resize: none;
+}
+.reviews-write input[type="text"]::placeholder, .reviews-write input[type="email"]::placeholder, .reviews-write__text::placeholder {
+	font-family: @font;
+	.font(12px; 16px);
+	color: #444;
+	opacity: 0.3;
+}
+.reviews-write__text:focus {
+	.no-outline();
+	border: 1px solid #63d1bb;
+}
+
+.reviews-write__btn {
+	.btn();
+	width: auto;
+	margin: 15px auto;
+}
+.modal-content-feedback {
+	display: none;
+}
+.catalog-modal-content {
+	display: none;
+}
+
+
+@media @tablet-widths {
+	.reviews-write--show {
+		width: 50%;
+		top: 10%;
+		left: 25%;
+	}
+}
+
+@media @desktop-widths {
+	.reviews-write--show {
+		width: 50%;
+		top: 25%;
+		left: 25%;
+	}
+}
