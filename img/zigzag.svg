@@ -1,0 +1,9 @@
+<!--Scalable Vector Graphic-->
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"  
+     width="334px" 
+     height="118px" 
+     viewBox="0 0 334px 118px">
+	<rect width="334" height="118" fill="#63d1bb"></rect>
+	<path d="M0,118 5,118 Q20,108 35,118 M35,118 40,118 Q55,108 70,118 M70,118 75,118 Q90,108 105,118 M105,118 110,118 Q125,108 140,118 M140,118 145,118 Q160,108 175,118 M175,118 180,118 Q195,108 210,118 M210,118 215,118 Q230,108 245,118 M245,118 250,118 Q265,108 280,118 M280,118 285,118 Q300,108 315,118 M315,118 320,118 Q335,108 350,118" stroke="white" fill="white" stroke-width="2" stroke-linejoin="round"/>
+</svg>
